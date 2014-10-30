@@ -1,0 +1,13 @@
+{% extends '_layout.jinja2' %}
+
+{% block content %}
+  <h2>{{ service.display_name }} on {{ service.host_alias }}</h2>
+  <dl>
+    <dt>Status</dt>
+    <dd class="{{ STATES[service.state] | lower }}">{{ STATES[service.state] }}</dd>
+    <dt>Last check</dt>
+    <dd>{{ service.last_check | date }}</dd>
+    <dt>Output</dt>
+    <dd>{{ service.plugin_output }}</dd>
+  </dl>
+{% endblock content %}

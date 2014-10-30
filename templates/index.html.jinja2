@@ -1,0 +1,10 @@
+{% extends '_layout.jinja2' %}
+
+{% block content %}
+  <h2>Hosts</h2>
+  <ul>
+    {% for host in hosts %}
+      <li><a href="{{ url_for('status', host_name=host.host_name) }}">{{ host.alias }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock content %}

@@ -1,0 +1,85 @@
+html {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 2em;
+}
+
+body {
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin: auto;
+  max-width: 800px;
+  padding: 1em 2em;
+}
+
+a {
+  background: rgba(160, 160, 160, 0.23);
+  color: inherit;
+  display: inline-block;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  background: rgba(128, 128, 128, 0.5);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+dt {
+  font-weight: bold;
+  margin-top: 0.5em;
+}
+
+dd {
+  margin: 0;
+}
+
+li {
+  display: inline-block;
+}
+
+nav,
+footer {
+  background: black;
+  margin: 0 -2em;
+  padding: 0 0.5em;
+}
+
+footer {
+  margin: 2em -2em -1em -2em;
+}
+
+nav li,
+footer li {
+  margin: 0 0.5em;
+}
+
+nav li a,
+footer li a {
+  color: white;
+  padding: 1em;
+}
+
+main li {
+  margin: 0.2em;
+  padding: 0.5em;
+}
+
+main li a {
+  margin: -0.5em;
+  padding: 0.5em;
+}
+
+.ok {
+  color: green;
+}
+
+.warning {
+  color: orange;
+}
+
+.critical {
+  color: red;
+}

@@ -1,0 +1,16 @@
+{% extends '_layout.jinja2' %}
+
+{% block content %}
+  {% for host_alias, services in services | groupby('host_alias') | sort %}
+    <h2>{{ host_alias }}</h2>
+    <ul>
+      {% for service in services | sort(attribute='display_name') %}
+        <li class="{{ STATES[service.state] | lower }}">
+          <a href="{{ url_for('service', host_name=service.host_name, service=service.display_name) }}">
+            {{ service.display_name }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+{% endblock content %}
